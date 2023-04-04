@@ -3,7 +3,7 @@
 #### Process
 
 * Create DigitalOcean droplet (Ubuntu 22.10 x64)
-* Install [Kafka](https://tecadmin.net/how-to-install-apache-kafka-on-ubuntu-22-04/)
+* Install Kafka
 
 ```bash
 sudo apt update && sudo apt upgrade
@@ -57,6 +57,8 @@ sudo systemctl status zookeeper
 sudo systemctl status kafka 
 ```
 
+<br>
+
 * Create topic
 
 ```bash
@@ -67,9 +69,11 @@ sudo systemctl status kafka
 ./bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic orders --property print.key=true --property key.separator="-"
 ```
 
+<br>
+
 * Generate fake data using my project - [Fake Chipotle Streaming](https://github.com/kadekillary/fake-chipotle-streaming)
 
-Few edits to for this:
+>**Note** had to make a few edits
 
 ```
 // added strconv lib
@@ -93,11 +97,7 @@ go mod download
 go run *.go
 ```
 
-
-
 https://user-images.githubusercontent.com/25046261/229938277-afda6335-2100-4154-ba19-9d9bc885aab5.mov
-
-
 
 <br> 
 
@@ -132,9 +132,7 @@ flush.size=1000
 rotate.interval.ms=3600000
 ```
 
-Replace the placeholders with your actual Kafka topic, S3 region, S3 bucket, and AWS credentials. You can also customize `flush.size` and `rotate.interval.ms` based on your requirements.
-
-**Start the S3 connector:**
+* Start S3 Connector
 
 Edit `/config/connect-standalone.properties` since not following schema/payload
 
@@ -152,7 +150,5 @@ $ ./bin/connect-standalone.sh ./config/connect-standalone.properties ./config/s3
 Validate
 
 <img width="808" alt="Screen Shot 2023-04-04 at 3 36 33 PM" src="https://user-images.githubusercontent.com/25046261/229937539-07d27300-750d-4444-979a-c79f31c323ba.png">
-
-bucket. Navigate to the AWS S3 console and verify that the data is being written to the S3 bucket.
 
 *Note: Make sure you have the necessary permissions to access the S3 bucket and Kafka topic.*
