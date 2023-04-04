@@ -13,6 +13,8 @@ kafka-topics.sh --create --bootstrap-server localhost:9092 --replication-factor 
 * Generate fake data using my project - [Fake Chipotle Streaming](https://github.com/kadekillary/fake-chipotle-streaming)
 * Create Kafka S3 Sink from notes in my Notion article
 
+<br>
+
 **Download and install the Kafka Connect S3 connector plugin:**
 
 The Confluent S3 connector is available on the Confluent Hub. Download the connector and extract it into the Kafka `libs/` directory. You can find the connector here: [https://www.confluent.io/hub/confluentinc/kafka-connect-s3](https://www.confluent.io/hub/confluentinc/kafka-connect-s3)
