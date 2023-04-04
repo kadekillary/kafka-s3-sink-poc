@@ -14,7 +14,10 @@ kafka-topics.sh --create --bootstrap-server localhost:9092 --replication-factor 
 ```
 
 * Generate fake data using my project - [Fake Chipotle Streaming](https://github.com/kadekillary/fake-chipotle-streaming)
-* Create Kafka S3 Sink from notes in my Notion article
+
+<br> 
+
+#### Create Kafka S3 Sink
 
 ```bash
 wget http://client.hub.confluent.io/confluent-hub-client-latest.tar.gz
