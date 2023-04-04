@@ -4,6 +4,9 @@
 
 * Create DigitalOcean droplet
 * Install [Kafka](https://tecadmin.net/how-to-install-apache-kafka-on-ubuntu-22-04/)
+```
+wget https://archive.apache.org/dist/kafka/3.2.0/kafka-3.2.0-src.tgz
+```
 * Create topic
 
 ```bash
