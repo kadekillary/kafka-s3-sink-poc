@@ -1,6 +1,8 @@
 <h3 align="center">Kafka S3 Sink POC</h3>
 
-* Performed on DigitalOcean droplet (Ubuntu 22.10 x64) 4vCPUs 8gb/160gb disk
+<br>
+
+> Performed on DigitalOcean droplet (Ubuntu 22.10 x64) 4vCPUs 8gb/160gb disk
 
 <br>
 
