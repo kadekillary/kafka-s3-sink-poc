@@ -6,7 +6,7 @@
 
 <br>
 
-##### Install Kafka
+#### Install Kafka
 
 ```bash
 sudo apt update && sudo apt upgrade
