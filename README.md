@@ -115,7 +115,7 @@ tar -xvf confluent-hub-client-latest.tar.gz
 export PATH="$HOME/bin:$PATH"
 cd /usr/local/share
 mkdir -p kafka/plugins
-confluent-hub install confluentinc/kafka-connect-s3:10.4.2 --component-dir /usr/local/share/kafka/plugins --worker-configs /usr/local/kafka/config/connect-distributed.properties
+confluent-hub install confluentinc/kafka-connect-s3:10.4.2 --component-dir /usr/local/share/kafka/plugins --worker-configs /usr/local/kafka/config/connect-standalone.properties
 ```
 
 Create `s3-sink.properties` @ `/usr/local/kafka/config/` - [docs](https://docs.confluent.io/kafka-connectors/s3-sink/current/overview.html#amazon-s3-sink-connector-for-cp):
