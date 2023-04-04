@@ -149,6 +149,3 @@ $ ./bin/connect-standalone.sh ./config/connect-standalone.properties ./config/s3
 
 Validate
 
-<img width="808" alt="Screen Shot 2023-04-04 at 3 36 33 PM" src="https://user-images.githubusercontent.com/25046261/229937539-07d27300-750d-4444-979a-c79f31c323ba.png">
-
-*Note: Make sure you have the necessary permissions to access the S3 bucket and Kafka topic.*
