@@ -104,7 +104,8 @@ go run *.go
 
 https://user-images.githubusercontent.com/25046261/229938277-afda6335-2100-4154-ba19-9d9bc885aab5.mov
 
-<br> 
+<br>
+<br>
 
 #### Create Kafka S3 Sink
 
@@ -117,7 +118,8 @@ mkdir -p kafka/plugins
 confluent-hub install confluentinc/kafka-connect-s3:10.4.2 --component-dir /usr/local/share/kafka/plugins --worker-configs /usr/local/kafka/config/connect-distributed.properties
 ```
 
-Create a new configuration file for the S3 connector, e.g., `s3-sink.properties` - location: `/usr/local/kafka/config/`. Configure the S3 connector with the required properties - [Docs](https://docs.confluent.io/kafka-connectors/s3-sink/current/overview.html#amazon-s3-sink-connector-for-cp):
+Create a new configuration file for the S3 connector, e.g., `s3-sink.properties` - location: `/usr/local/kafka/config/`.
+Configure the S3 connector with the required properties - [Docs](https://docs.confluent.io/kafka-connectors/s3-sink/current/overview.html#amazon-s3-sink-connector-for-cp):
 
 ```
 name=s3-sink
@@ -138,6 +140,9 @@ rotate.interval.ms=3600000
 ```
 
 <br>
+
+<img width="808" alt="Screen Shot 2023-04-04 at 3 36 33 PM" src="https://user-images.githubusercontent.com/25046261/229939970-7616ab63-baba-411c-b309-f11f9f4601a0.png">
+
 
 #### Start S3 Connector
 
