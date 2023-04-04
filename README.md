@@ -1,9 +1,10 @@
 <h3 align="center">Kafka S3 Sink POC</h3>
 
-#### Process
+* Performed on DigitalOcean droplet (Ubuntu 22.10 x64) 4vCPUs 8gb/160gb disk
 
-* Create DigitalOcean droplet (Ubuntu 22.10 x64)
-* Install Kafka
+<br>
+
+##### Install Kafka
 
 ```bash
 sudo apt update && sudo apt upgrade
@@ -59,7 +60,7 @@ sudo systemctl status kafka
 
 <br>
 
-* Create topic
+#### Create Topic
 
 ```bash
 # from /usr/local/kafka
@@ -71,7 +72,9 @@ sudo systemctl status kafka
 
 <br>
 
-* Generate fake data using my project - [Fake Chipotle Streaming](https://github.com/kadekillary/fake-chipotle-streaming)
+#### Generate Fake Data
+
+* Using my project - [Fake Chipotle Streaming](https://github.com/kadekillary/fake-chipotle-streaming)
 
 >**Note** had to make a few edits
 
@@ -132,7 +135,9 @@ flush.size=1000
 rotate.interval.ms=3600000
 ```
 
-* Start S3 Connector
+<br>
+
+#### Start S3 Connector
 
 Edit `/config/connect-standalone.properties` since not following schema/payload
 
@@ -147,5 +152,6 @@ Start the S3 connector using the Kafka Connect CLI:
 $ ./bin/connect-standalone.sh ./config/connect-standalone.properties ./config/s3-sink.properties
 ```
 
-Validate
+<br>
 
+#### Validate data in S3
