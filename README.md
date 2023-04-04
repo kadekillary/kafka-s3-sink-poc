@@ -127,7 +127,7 @@ tasks.max=1
 
 topics=chip-orders
 s3.region=us-west-1
-s3.bucket.name=chip-orders
+s3.bucket.name=orders-chipotle-testing
 
 aws.access.key.id=your_aws_access_key
 aws.secret.key=your_aws_secret_key
