@@ -10,10 +10,26 @@ wget https://archive.apache.org/dist/kafka/3.2.0/kafka_2.13-3.2.0.tgz
 * Create topic
 
 ```bash
-kafka-topics.sh --create --bootstrap-server localhost:9092 --replication-factor 1 --partition 1 --topic orders
+# from /usr/local/kafka
+/bin/kafka-topics.sh --create --bootstrap-server localhost:9092 --replication-factor 1 --partitions 1 --topic orders
+
+# consume topic w/ key
+/bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic orders --property print.key=true --property key.separator="-"
 ```
 
 * Generate fake data using my project - [Fake Chipotle Streaming](https://github.com/kadekillary/fake-chipotle-streaming)
+
+```bash
+git clone https://github.com/kadekillary/fake-chipotle-streaming.git
+
+sudo apt install golang-go
+
+# be in /src dir
+go mod download
+
+# start sending data to topic
+go run *.go
+```
 
 <br> 
 
