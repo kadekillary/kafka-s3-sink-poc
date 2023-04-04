@@ -2,7 +2,7 @@
 
 #### Process
 
-* Create DigitalOcean droplet
+* Create DigitalOcean droplet (Ubuntu 22.10 x64)
 * Install [Kafka](https://tecadmin.net/how-to-install-apache-kafka-on-ubuntu-22-04/)
 
 ```bash
