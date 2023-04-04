@@ -26,7 +26,7 @@ export PATH="$HOME/bin:$PATH"
 confluent-hub install confluentinc/kafka-connect-s3:10.4.2 --component-dir /usr/local/kafka/libs --worker-configs /usr/local/kafka/config/connect-console-sink.properties
 ```
 
-Create a new configuration file for the S3 connector, e.g., `s3-sink.properties`. Configure the S3 connector with the required properties - [Docs](https://docs.confluent.io/kafka-connectors/s3-sink/current/overview.html#amazon-s3-sink-connector-for-cp):
+Create a new configuration file for the S3 connector, e.g., `s3-sink.properties` - location: `/usr/local/kafka/config/`. Configure the S3 connector with the required properties - [Docs](https://docs.confluent.io/kafka-connectors/s3-sink/current/overview.html#amazon-s3-sink-connector-for-cp):
 
 ```
 name=s3-sink
